@@ -246,7 +246,7 @@ cursor: pointer;}
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: left;
-  transition: all 0.5ms ease;
+  transition: all 1s ease;
   transform-style: preserve-3d;
   animation: shake 0.01ms ease-in-out infinite;
 }
@@ -332,8 +332,8 @@ h2 {
   padding: 1.5rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transform-style: preserve-3d; /* Enables 3D perspective */
-  animation: rotateCardY 3s linear infinite; /* Add rotation along Y-axis */
-  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  animation: rotateCardY 5s linear infinite; /* Add rotation along Y-axis */
+  transition: transform 5s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-card:hover {
@@ -427,7 +427,7 @@ h2 {
   padding: 1.5rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transform-style: preserve-3d; /* Enables 3D rotation */
-  animation: rotateCardACW 1s linear infinite; /* Smooth 3D rotation */
+  animation: rotateCardACW 5s linear infinite; /* Smooth 3D rotation */
   transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
