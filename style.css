@@ -298,6 +298,7 @@ cursor: pointer;}
   }
 }
 
+/*Skills Section  */
 
 .skills {
   padding: 3rem 0;
@@ -342,21 +343,9 @@ h2 {
   padding: 1.5rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transform-style: preserve-3d;
-  animation: rotateCardY 6s linear infinite, floatUp 3s ease-in-out infinite;
+  animation: floatUp 3s ease-in-out infinite;
   transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-}
-
-@keyframes rotateCardY {
-  0% {
-    transform: rotateY(0deg);
-  }
-  50% {
-    transform: rotateY(180deg);
-  }
-  100% {
-    transform: rotateY(360deg);
-  }
 }
 
 @keyframes floatUp {
@@ -684,4 +673,6 @@ footer .social-link:hover {
   transform: scale(1.2);
   color: #ffdd48;
 }
+
+
 
