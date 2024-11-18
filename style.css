@@ -248,7 +248,7 @@ cursor: pointer;}
   text-align: left;
   transition: all 0.5ms ease;
   transform-style: preserve-3d;
-  animation: shake 0.01ms ease-in-out infinite;
+  animation: shake 1s ease-in-out infinite;
 }
 
 .education-card:hover{
@@ -299,11 +299,20 @@ cursor: pointer;}
 }
 
 
-
 .skills {
   padding: 3rem 0;
   background: linear-gradient(to right, #f1f8e9, #e8f5e9);
   text-align: center;
+  animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .container {
@@ -317,6 +326,7 @@ h2 {
   margin-bottom: 30px;
   font-size: 2.5rem;
   color: #753a88;
+  animation: fadeIn 2s ease-out;
 }
 
 .skills-grid {
@@ -331,34 +341,38 @@ h2 {
   border-radius: 8px;
   padding: 1.5rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transform-style: preserve-3d; /* Enables 3D perspective */
-  animation: rotateCardY 3s linear infinite; /* Add rotation along Y-axis */
+  transform-style: preserve-3d;
+  animation: rotateCardY 6s linear infinite, floatUp 3s ease-in-out infinite;
   transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill-card:hover {
-  transform: translateY(-10px) rotateY(0deg); /* Lifts the card on hover */
-  background: linear-gradient(180deg, #ff6f61, #42a5f5); /* Change background gradient */
-  box-shadow: 0 8px 15px rgba(0, 140, 255, 0.4); /* Enhanced shadow effect */
-  animation: none; /* Stops the rotation */
+  position: relative;
 }
 
 @keyframes rotateCardY {
   0% {
-    transform: rotateX(0deg);
-  }
-  25% {
-    transform: rotateX(90deg);
+    transform: rotateY(0deg);
   }
   50% {
-    transform: rotateX(180deg);
-  }
-  75% {
-    transform: rotateX(270deg);
+    transform: rotateY(180deg);
   }
   100% {
-    transform: rotateX(360deg);
+    transform: rotateY(360deg);
   }
+}
+
+@keyframes floatUp {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.skill-card:hover {
+  transform: translateY(-15px) rotateY(0deg);
+  background: linear-gradient(180deg, #ff6f61, #42a5f5);
+  box-shadow: 0 8px 15px rgba(0, 140, 255, 0.4);
+  animation: none; /* Stops rotation on hover */
 }
 
 .skill-card h3 {
@@ -377,6 +391,11 @@ h2 {
   width: 50px;
   height: 50px;
   margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover .skill-icon img {
+  transform: scale(1.1); /* Scale up the icon slightly on hover */
 }
 
 /* Responsive Design */
@@ -389,7 +408,6 @@ h2 {
     font-size: 2rem;
   }
 }
-
 
 
 
